@@ -1,9 +1,4 @@
-
-# Chris is a pooper scooper
-jk he is a saint boy genius!
-Yay Alex is set up on Github
-=======
-# Hey Alex, welcome to Github!
+# This is the Github page for JonWaltz
 
 To push changes:
 

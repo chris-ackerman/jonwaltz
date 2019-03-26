@@ -1,6 +1,16 @@
-* {
-  font-family: courier;
+@font-face {
+    font-family: 'GothamMediumItalic';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../files/gotham/GothamMediumItalic.woff') format('woff');
 }
+
+* {
+  font-family: Verdana;
+  font-style: italic;
+}
+
+/*font-family: GothamMediumItalic;*/
 /* GENERAL */
 .wrap {
 	width: 90%;
@@ -14,7 +24,6 @@ body {
   height: 100%;
   overflow-x: hidden;
   margin: 0 auto;
-  font-family: futura;
 }
 
 nav, label, input#burger {
@@ -27,7 +36,7 @@ h1 {
 a {
 	text-decoration: none;
 	list-style-type: none;
-	color: black;
+	color: white;
 }
 
 img#fish {
@@ -116,12 +125,18 @@ ul#horizontal-list li {
 	padding: 0px 10px 20px 10px;
 }
 
+.right {
+	float: right;
+	margin-top: 20px;
+}
+
 .adInfoBox1 {
     padding: 5px 5px 5px 10px;
     position: absolute;
     bottom: 0; /* attaches the element to the bottom */
     left: 0; /* attaches the element to the left-side */
     right: 0; /* attaches the element to the right-side */
+    background: red;
 }
 
 .fa-2x {
@@ -161,7 +176,7 @@ body input + label span {
   margin-top: -1px;
   left: 0;
   display: block;
-  background: #020304;
+  background: white;
   transition: .5s;
 }
 body input + label span:first-child {
@@ -180,10 +195,12 @@ body input:checked + label span {
 body input:checked + label span:first-child {
   opacity: 1;
   transform: rotate(405deg);
+  background: black;
 }
 body input:checked + label span:last-child {
   opacity: 1;
   transform: rotate(-405deg);
+  background: black;
 }
 body input ~ nav {
   background: white;
@@ -243,23 +260,36 @@ ul {
 	margin: 0 auto;
 }
 
+.font {
+	font-family: 'GothamMediumItalic' !important;
+	color: white;
+}
+
 #mc_embed_signup input, #mc_embed_signup input.email, #mc_embed_signup input.button {
-	background-color: black;
-	border: 1px solid black !important;
+	background-color: white;
+	border: 0px solid white !important;
+	border-radius: 0px !important;
 	color: black !important;
-	font-family: courier !important;
+	font-family: Verdana, Geneva, sans-serif !important;
+	font-style: italic !important;
 	display: block !important;
 	margin: 0 auto !important;
 	margin-bottom: 10px !important;
+	width: 250px !important;
 	height: 25px !important;
-	line-height: 15px !important;#
+	line-height: 15px !important;
 }
 
 #mc_embed_signup input.button {
-	font-size: 12px;
-	background-color: #EF411F;
+	font-size: 15px;
+	background-color: black !important;
 	color: white !important;
 	font-weight: 900 !important;
+	width: 250px !important;
+}
+
+#mc_embed_signup form {
+	padding: 0 !important;
 }
 
 
@@ -269,7 +299,7 @@ ul {
 
 
 #subscribe-mobile {
-	display: none;
+	/*display: none;*/
 }
 
 #mobile-icons {
@@ -288,8 +318,12 @@ ul {
 	}
 
 	.nav-subscribe {
-	display: none !important;
-}
+		display: none !important;
+	}
+
+	.right {
+		display: none !important;
+	}
 
 	#subscribe-mobile {
 		display: block !important;
@@ -338,6 +372,7 @@ ul {
 
 #top-icon {
 	margin: 20px 0px 0px 20px;
+	color: white;
 }
 
 /* NEW VIDEO DIV STUFF */
@@ -357,17 +392,27 @@ ul {
 	z-index: 501;
 }
 
-.preloader {
-	width: 100% !important;
-	background: white !important;
-}
-
-video {
+video, .centered-div {
 	width:100%;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+}
+
+#centered-button, img {
+	display: block;
+	margin: auto;
+}
+
+.preloader {
+	height: 100% !important;
+	background: black !important;
+}
+
+.preloader video {
+	height: 100% !important;
+	width: auto;
 }
 
 
